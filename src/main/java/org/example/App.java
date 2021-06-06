@@ -29,10 +29,22 @@ If your language doesn’t support a ternary operator, use a regular if/else sta
 and still use a single output statement to display the message.
  */
 
-public class App 
+import java.util.Scanner;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("What is your age? ");
+        String cAge = in.nextLine();
+
+        int legalAge = 16;
+        String print;
+
+        print = Integer.decode(cAge) > legalAge ? "You are old enough to legally drive." : "You are not old enough to legally drive.";
+
+        System.out.println(print);
     }
 }
